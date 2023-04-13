@@ -5,6 +5,7 @@ export default function HomePage() {
 
     async function createTodo(data) {
         const newTodo = await todosAPI.create(data);
+        console.log(newTodo, "success")
     }
 
 
