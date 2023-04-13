@@ -14,11 +14,11 @@ Create an application to create, view, update, and destroy ‘todo’ items. The
 
 ### To begin the code test
 
-* [ ] Fork this repository into a public repository on your account
+* [X] Fork this repository into a public repository on your account
 
 ### While working on this, please:
 
-* [ ] Commit early and often. We'll likely be following along with your progress.
+* [X] Commit early and often. We'll likely be following along with your progress.
 
 ### Upon completion, please email to us:
 
