@@ -10,6 +10,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 const http = require('http').Server(app);
 
+app.use('/api/todos', require('./routes/api/todos'));
+
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
