@@ -1,15 +1,15 @@
 import DisplayTodosItem from "../DisplayTodosItem/DisplayTodosItem"
 
-export default function DisplayTodos({ allTodos, deleteTodo }) {
+export default function DisplayTodos({ allTodos, deleteTodo, updateTodo }) {
     const completedTodos = allTodos.filter(t => t.completed)
     const notCompletedTodos = allTodos.filter(t => !t.completed)
 
     const displayCompleted = completedTodos.map(todo => (
-        <DisplayTodosItem key={todo._id} todo={todo} deleteTodo={deleteTodo}/>
+        <DisplayTodosItem key={todo._id} todo={todo} deleteTodo={deleteTodo} updateTodo={updateTodo}/>
     ))
 
     const displayNotCompleted = notCompletedTodos.map(todo => (
-        <DisplayTodosItem key={todo._id} todo={todo} deleteTodo={deleteTodo}/>
+        <DisplayTodosItem key={todo._id} todo={todo} deleteTodo={deleteTodo} updateTodo={updateTodo}/>
     ))
 
 
