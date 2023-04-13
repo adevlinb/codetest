@@ -20,7 +20,7 @@ export default function TodosForm({ createTodo }) {
         <form onSubmit={handleSubmit}>
             <label>
                 Add a new Todo!
-                <input value={formData.description} placeholder="new todo" onChange={(evt) => setFormData({ description: evt.target.value })}/>
+                <input value={formData.description} name="description" placeholder="new todo" onChange={(evt) => setFormData({ description: evt.target.value })}/>
             </label>
             <Button buttonType={"submit"} label={"create new todo"}/>
         </form>
