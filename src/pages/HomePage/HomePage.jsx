@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
-import TodosForm from "../../components/TodosForm/TodosForm"
-import DisplayTodos from "../../components/DisplayTodos/DisplayTodos"
-import * as todosAPI from "../../utilities/todos-api"
+import TodosForm from "../../components/TodosForm/TodosForm";
+import DisplayTodos from "../../components/DisplayTodos/DisplayTodos";
+import * as todosAPI from "../../utilities/todos-api";
+import "./HomePage.css";
+
 
 export default function HomePage() {
     const [allTodos, setAllTodos] = useState([]);
@@ -35,9 +37,9 @@ export default function HomePage() {
     }
 
 
-    return <>
+    return <div className="home-container">
         <h1>Roaming Hunger Code Challenge</h1>
         <TodosForm createTodo={createTodo} />
         <DisplayTodos allTodos={allTodos} deleteTodo={deleteTodo} updateTodo={updateTodo}/>
-    </>
+    </div>
 }

@@ -8,7 +8,7 @@ export default function TodosForm({ createTodo }) {
 
     function handleSubmit(evt) {
         evt.preventDefault();
-        if (formData.description === "" || formData.description.length < 3) return
+        if (formData.description.length < 3) return
         createTodo(formData);
         setFormData({ description: "" });
     }

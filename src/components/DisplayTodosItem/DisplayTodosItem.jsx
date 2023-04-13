@@ -14,7 +14,7 @@ export default function DisplayTodosItem({todo, deleteTodo, updateTodo}) {
             :
             <>
                     <h3>{todo.description}</h3>
-                    <h3>{todo.completed ? "done" : "incomplete"}</h3>
+                    {/* <h3>{todo.completed ? "done" : "incomplete"}</h3> */}
                     <button onClick={() => deleteTodo(todo._id)}>delete</button>
                     <button onClick={() => setShowEditForm(!showEditForm)}>Edit?</button>
                 </>
