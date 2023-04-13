@@ -19,10 +19,17 @@ export default function HomePage() {
         setAllTodos([...allTodos, newTodo]);
     }
 
+    async function deleteTodo(id) {
+        console.log(id)
+        const deletedTodo = await todosAPI.deleteTodo(id);
+        const filteredTodos = allTodos.filter(t => t._id !== id);
+        setAllTodos(filteredTodos);
+    }
+
 
     return <>
         <h1>Roaming Hunger Code Challenge</h1>
         <TodosForm createTodo={createTodo} />
-        <DisplayTodos allTodos={allTodos} />
+        <DisplayTodos allTodos={allTodos} deleteTodo={deleteTodo}/>
     </>
 }
