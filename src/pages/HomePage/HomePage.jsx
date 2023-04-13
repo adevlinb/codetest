@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import TodosForm from "../../components/TodosForm/TodosForm"
+import DisplayTodos from "../../components/DisplayTodos/DisplayTodos"
 import * as todosAPI from "../../utilities/todos-api"
 
 export default function HomePage() {
@@ -22,5 +23,6 @@ export default function HomePage() {
     return <>
         <h1>Roaming Hunger Code Challenge</h1>
         <TodosForm createTodo={createTodo} />
+        <DisplayTodos allTodos={allTodos} />
     </>
 }
