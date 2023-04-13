@@ -28,7 +28,6 @@ async function create(req, res) {
 async function update(req, res) {
     try {
         const updatedTodo = await Todo.findOneAndUpdate( { _id: req.params.id }, req.body, {new: true} );
-        console.log(updatedTodo);
         res.status(200).json(updatedTodo);
     } catch (err) {
         res.status(500).json("bad request");
