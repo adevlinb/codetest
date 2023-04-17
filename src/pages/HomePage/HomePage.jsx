@@ -22,15 +22,12 @@ export default function HomePage() {
     }
 
     async function updateTodo(data, id) {
-        console.log(data, id)
         const filteredTodos = allTodos.filter(t => t._id !== id);
         const updatedTodo = await todosAPI.updateTodo(data, id);
-        console.log(updatedTodo, "UPDATWESEDD!!")
         setAllTodos([...filteredTodos, updatedTodo]);
     }
 
     async function deleteTodo(id) {
-        console.log(id)
         const deletedTodo = await todosAPI.deleteTodo(id);
         const filteredTodos = allTodos.filter(t => t._id !== id);
         setAllTodos(filteredTodos);
